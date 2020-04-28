@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style type="text/css">
+        <!--@import url(https://www.econometrica.cn/style.css);-->
+    </style>
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <title>笔记页</title>
+</head>
+<body>
+<script>
+var key = JSON.parse(localStorage.getItem("key"));
+var usr = JSON.parse(localStorage.getItem("usr"));
+</script>
+<div class="main-content">
+ <h3>Hello&nbsp;<span id="myhead"></span>, draw your fate wave!</h3>
+ <input type="button" id="myexit" value="退出登录">
+</div>
+<script>
+document.getElementById('myhead').innerHTML = usr
+$("#myexit").click(function () {
+    localStorage.removeItem('usr')
+    localStorage.removeItem('key')
+    window.location.href='/usr';
+});
+</script>
+</body>
+
+

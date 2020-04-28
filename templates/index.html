@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="charset=utf-8"/>
+    </style>
+    <title>笔记页</title>
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+    try{
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "/usr/login",
+        data: {usr:JSON.parse(localStorage.getItem("usr")),key:JSON.parse(localStorage.getItem("key"))},
+        success: function (response) {
+            if(response['status']==0){
+                window.location.href='/usr/home';
+                localStorage.setItem("key",JSON.stringify(response['key']));
+            }
+        },
+        error: function (e) {
+            console.error("Error:" + e);
+        }
+    })
+    }catch (error) {
+        //在错误发生时怎么处理
+    }
+</script>
+</head>
+<body>
+<div>
+    <form id="myform" name="myform" method="post">
+        帐号 <input type="text" name="usr"/><br/>
+        密码 <input type="password" name="password"/><br/>
+        <input type="button" id="submitBtn" value="登陆">
+    </form>
+</div>
+<script type="text/javascript">
+    $("#submitBtn").click(function () {
+        var data = $("#myform").serialize();
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/usr/login",
+            data: data,
+            success: function (response) {
+                if(response['status']==0){
+                    window.location.href='/usr/home';
+                    localStorage.setItem("usr",JSON.stringify(document.myform.usr.value));
+                    localStorage.setItem("key",JSON.stringify(response['key']));
+                }else if(response['status']==-1){
+                    
+                }
+            },
+            error: function (e) {
+                console.error("Error:" + e);
+            }
+        })
+    });
+</script>
+</body>
+
+

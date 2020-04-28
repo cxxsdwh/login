@@ -1,0 +1,171 @@
+5. To comply with the Code and Standards, analysts who send research
+recommendations to clients must:
+A. keep records of all the data and analysis that went into creating the report.
+B. send recommendations only to those clients for whom the investments are suitable.
+C. not send recommendations without including the underlying analysis and basic investment characteristics.
+5. A Standard V(C) Record Retention requires members to maintain records of the data and analysis they use to develop their research recommendations. Recommendations may be brief, in capsule form, or simply a list of buy/sell recommendations. A list of recommendations may be sent without regard to suitability, including both safe income stocks and aggressive growth stocks, for example.
+6. Marilyn Walters, CFA, supervises a large group of research analysts.
+Walters has delegated some of her supervisory responsibilities to her assistant, Amy Brooks, who is a CFA candidate. In carrying out her responsibilities, Brooks has discovered that the firm's compliance system is inadequate and informed Walters, who has not been very supportive
+of Brooks's efforts to correct the situation. According to CFA Institute Standards of Professional Conduct, Brooks:
+A. must dissociate herself from the firm because the firm is not in compliance with the CFA Institute Standards.
+B. should decline in writing to accept supervisory responsibilities until a reasonable compliance system is adopted.
+C. has satisfied her obligation under the Code and Standards by informing her manager of the situation.
+6. B Standard IV(C) Responsibilities of Supervisors indicates that a member should decline supervisory responsibility in writing until the firm adopts reasonable compliance procedures. Otherwise, Brooks cannot adequately exercise her responsibility.
+7. Not including the results of terminated accounts when calculating
+historical performance is recommended by:
+A. both GIPS and the Standard concerning performance presentation.
+B. GIPS, but not by the Standard concerning performance presentation.
+C. neither GIPS nor the Standard concerning performance presentation
+7. C Standard III(D) Performance Presentation recommends that terminated accounts be included in historical performance calculations.
+8. Ken Toma, a CFA charterholder and securities analyst for the leisure
+services industry, has just completed an extensive review of the demand
+for beach vacations in Hawaii and concluded that the demand will far exceed the supply for the foreseeable future. Toma writes a research report stating, "Based on the fact that the demand for Hawaiian beach vacations will exceed the supply of rooms for the foreseeable future, I recommend the purchase of shares of the Hawaiian Fund, a diversified portfolio of Hawaiian beachfront resorts." If Toma presents this report to his clients, he will have violated the CFA Institute Standards:
+
+A. because he did not distinguish between fact and opinion.
+B. by failing to have a reasonable and adequate basis for his recommendation.
+C. because he did not consider the suitability of the investment for his clients.
+8. A Standard V(B) Communication with Clients and Prospective Clients requires that Toma separate opinion from fact. Toma's statement that excess demand will persist into the foreseeable future is an opinion, not a fact.
+9. Derek Stevens, CFA, manages the pension plan assets of Colors, Inc.
+When voting proxies for plan equities, Stevens owes a fiduciary duty to:
+A. the plan trustees who hired him.
+B. the plan participants and beneficiaries.
+C. the managers, stockholders, and bondholders of Colors, Inc. equally.
+9. B Under Standard III(A) Loyalty, Prudence, and Care, the fiduciary duty in this case is to plan participants and beneficiaries, not shareholders or plan trustees.
+10. Dawn Shields, CFA, decides to change her recommendation on TelSky
+from "buy" to "sell." In the morning, she mails the revision to all her clients with a known interest in TelSky. That afternoon, one of these clients calls in an order to buy 15,000 shares of TelSky. According to the Standard on fair dealing, Shields:
+A. must accept the order without mentioning the change because the Standard requires her to inform all clients of the change in recommendation simultaneously.
+B. should advise her customer of the change in her recommendation before accepting the order.
+C. must not accept the order until the customer has had time to receive and read the new report.
+10. B According to Standard III(B) Fair Dealing, if a client places an order that goes against the firm's recommendation for that security, members and candidates should inform the client of the discrepancy between the order and the firm's recommendation before accepting the order.
+24. Greg Goldman, research analyst in the fixed-income area of an investment
+bank, needs to determine the average duration of a sample of twenty 15-year fixed-coupon investment grade bonds. Goldman first categorizes the bonds by risk class and then randomly selects bonds from each class. After combining the bonds selected (bond ratings and other information taken as of March 31 of the current year), he calculates a sample mean duration of 10.5 years. Assuming that the actual population mean duration is 9.7 years, which of the following statements about Goldman's sampling process and sample is least accurate?
+
+A. Goldman is using time-series data.
+B. The sample mean is a random variable.
+C. The sampling error is 0.8 years.
+24. A The data are cross-sectional, which means that it is a sample of observations taken at a single point in time. Time-series data are observations taken at specific and equally spaced points in time (for example, the monthly returns on a specific stock for the period January 1 through December 31 of a given year. The sampling error is the difference between a sample statistic (here, the mean) and the corresponding population parameter, or 10.5 — 9.7 = 0.8. The sample statistic (here, the mean) is itself a random variable and has its own probability distribution. (Study Session 3, LOS 10.d)
+32. From a high of $180, a stock price decreases to a low of $100 and then
+begins increasing. A technical analyst states that she expects resistance levels to emerge at $140, $150, and $153.33. This analyst is most likely forecasting these resistance levels based on:
+
+A. Fibonacci numbers.
+B. an inverse head and shoulders pattern.
+C. moving average convergence/divergence lines.
+32. A The forecast resistance levels are one-half, five-eighths, and two-thirds of the price decrease from $180 to $100. All of these are Fibonacci ratios. Projecting from the breakout of an inverse head and shoulders pattern would more likely suggest a single price target or range than three different specific targets. Moving average convergence/ divergence lines are unlikely to be used for price targeting because they are not on the same scale as prices. (Study Session 3, LOS 12.d, e, g)
+33. To benefit from price discrimination, a monopolist least likely needs to have:
+
+A. a higher-quality product at a premium price and a lower-quality alternative.
+B. a way to prevent reselling between types of consumers.
+C. two identifiable groups of consumers with different price elasticities of demand for the product.
+33. A Price discrimination involves a single product, not two alternatives. As long as the company faces a downward-sloping demand curve, can identify at least two groups of customers with different price elasticities of demand, and can prevent reselling between groups, the company can profit from price discrimination. (Study Session 4, LOS 16.b, d)
+37. Three years ago, the U.S. dollar/euro exchange rate was 1.32 USD/EUR.
+Over the last three years, the price level in the United States has increased by 18%, and the price level in the eurozone has increased by 12%. If the current exchange rate is 1.40 USD/EUR, the real exchange rate over the period has:
+
+A. increased, and eurozone goods are now more expensive to U.S. consumers.
+B. decreased, and eurozone goods are now more expensive to U.S. consumers.
+C. increased, and U.S. goods are now more expensive to eurozone consumers.
+37. A For the base period, three years ago, the real exchange rate is the same as the nominal exchange rate, 1.32 USD/EUR. The real exchange rate over the period has changed from 1.32 to 1.40 x (112 / 118) = 1.3288. This increase in the real USD/EUR exchange rate indicates that the base currency (EUR) has appreciated in real terms, so that eurozone goods are now more expensive in real terms to U.S. consumers. (Study Session 6, LOS 21.a)
+47. An analyst gathered the following data about a company:
+
+• Collections from customers are $5,000.
+• Depreciation is $800.
+• Cash expenses (including taxes) are $2,000.
+• Tax rate = 30%.
+• Net cash increased by $1,000.
+
+If inventory increases over the period by $800, cash flow from operations equals:
+A. $1,600.
+B. $2,400.
+C. $3,000.
+47. C Use the direct method.
+Collections from customers $5,000
+Cash expenses —$2,000
+Cash flow from operations $3,000
+Cash expenses are given. If you had been given COGS, you would need to adjust that for inventory changes to get cash expenses for inputs. Depreciation is a non-cash change.
+
+Changes in depreciation are used with the indirect method. Net change in cash will reflect CFI and CFF, not just CFO. (Study Session 8, LOS 27.f)
+50. Under which type of pension plan are retirement benefit payments an
+obligation of the sponsoring firm?
+
+A. Defined benefit plan only.
+B. Defined contribution plan only.
+C. Both a defined benefit plan and a defined contribution plan.
+50. A Promised retirement payments from a defined benefit pension plan are an obligation of the sponsoring firm. A defined contribution plan does not promise a specific periodic payment after retirement and the firm's obligations are limited to its promised contributions to current employees' accounts. (Study Session 9, LOS 32.j)
+69. Responsibilities of a board of directors' nominations committee are least likely to include:
+
+A. recruiting qualified members to the board.
+B. selecting an external auditor for the company.
+C. preparing a succession plan for the company's executive management.
+69. B Selecting an external auditor (subject to shareholder approval) is a responsibility of the Board's audit committee. (Study Session 11, LOS 41.e)
+71. Timely Taxis, Ltd. has signed a long-term lease for 20 underground
+parking spots at $150 each per month for its fleet of taxis. The firm currently has 18 taxis in operation and is performing an NPV analysis on the purchase of a 19th taxi. The cost of parking for the 19th taxi is best described as a(n):
+
+A. sunk cost.
+B. opportunity cost.
+C. incremental cost.
+71. A The 19th space is neither an incremental cost, nor an opportunity cost or a type of cannibalization. It is a sunk cost since the firm has already committed to parking for 20 taxis. The cost of the 19th parking space is not directly relevant to the capital budgeting decision. (Study Session 11, LOS 36.b)
+76. If firms Acme and Butler have the same amount of sales and equal quick
+ratios, but Acme's receivables turnover is higher, it is most likely that:
+
+A. Butler has better liquidity than Acme.
+B. Butler has a lower cash ratio than Acme.
+C. Acme's average days of receivables is higher than Butler's.
+76. B Given that they have the same amount of sales and Acme's receivables turnover (sales/average accounts receivable) is higher, Acme must have lower average accounts receivable than Butler. Given that they have equal quick ratios, subtracting accounts receivable from the numerators of the quick ratios of both firms will produce a cash ratio for Butler that is lower than the cash ratio for Acme. (Study Session 11, LOS 40.b)
+93. Which of the following statements about short selling is least accurate?
+
+A. A short seller is required to set up a margin account.
+B. A short sale involves securities the investor does not own.
+C. A short seller loses if the price of the stock sold short decreases.
+93. C The short seller loses if the stock price increases. The other choices are accurate statements. (Study Session 13, LOS 46.e)
+94. Compared to an index of 100 U.S. exchange-traded stocks, an index of
+100 U.S. government and corporate bonds will most likely:
+
+A. reflect equally timely price data.
+B. be more difficult to build and maintain.
+C. have less turnover among the securities in the index.
+94. B Bond indexes are more difficult to build and maintain than stock indexes for several reasons. Bonds in an index have to be replaced as they mature, so turnover is likely to be greater in a bond index than in a stock index. Many bonds lack the continuous trade data that exists for exchange-traded equities. (Study Session 13, LOS 47.i)
+96. An industry in the growth phase of the industry life cycle is most likely to
+experience:
+
+A. increasing prices.
+B. increasing profitability.
+C. intense competition among competitors.
+96. B An industry in the growth stage is usually characterized by increasing profitability, decreasing prices, and a low degree of competition among competitors.
+(Study Session 14, LOS 50.h)
+98. Which of the following is an advantage of a callable bond (compared to an identical option-free bond) to an investor?
+
+A. Less reinvestment risk.
+B. Higher yield.
+C. More convexity.
+98. B An issuer of a callable bond must compensate the bondholder when the issue is sold by offering a higher coupon rate or accepting a lower price than if the call feature was not included. Convexity will typically be much less than for an option-free bond, and reinvestment risk is greater for callable bonds. (Study Session 15, LOS 53.h)
+100. The yield spreads between corporate bonds and Treasuries are most likely to decrease if:
+
+A. liquidity decreases in the market for the bonds.
+B. a credit rating downgrade on the bonds becomes more likely.
+C. investors increase their estimates of the recovery rate on the bonds.
+100.C Yield spreads reflect the credit quality of bond issuers and the liquidity of the market for their bonds. Narrowing (decreasing) yield spreads reflect improving credit quality or more liquidity. Widening (increasing) yield spreads reflect deteriorating credit quality or less liquidity. Increased estimates of the recovery rate in the event of default represent an improvement in investors' assessment of the issuer's credit quality and are likely to narrow yield spreads on the issuer's bonds. (Study Session 16, LOS 59.a)
+101. The full price of a bond:
+A. includes accrued interest.
+B. includes commissions and taxes.
+C. is also known as the "clean" price.
+101. AThe full price is clean price plus accrued interest. (Study Session 15, LOS 52.c)
+102. Which of the following statements regarding sinking funds is most accurate?
+A. The specific bonds that will be redeemed on each scheduled date are identified in the indenture.
+B. Sinking fund redemptions can be accomplished by making cash payment to the trustee who will then retire the required proportion of the bonds.
+C. If yields have declined since the bond was issued, companies are likely to choose to retire the required portion of the debt by delivering securities to the trustee.
+102. B The issuer may deliver either cash or bonds to the trustee. Specific bonds to be redeemed are not typically identified in advance. Companies would retire through the delivery of securities if yields have increased. (Study Session 15, LOS 52.d,e)
+117. A hedge fund uses derivative positions to take a long position in the Japanese yen and a short position in the euro. The classification of this hedge fund is most likely a(n):
+A. event-driven fund.
+B. macro strategy fund.
+C. quantitative directional fund.
+117. B Macro strategy funds invest based on expected shifts of global economies, primarily in currency and interest rate derivatives. Quantitative directional funds take long and short positions in equities based on technical analysis. Event-driven funds seek to profit from investment strategies based on specific corporate events and one-time transactions. (Study Session 18, LOS 66.d)
+118. Chip Jergen, CFA, is an asset manager who wishes to allocate a percentage of his portfolio to alternative investments. Jergen invests in a security that represents a proportional claim to cash flows from a pool of loans. In which category of alternative investments has Jergen most likely invested?
+A. Real estate.
+B. Commodities.
+C. Private equity.
+118. A One of the ways to invest in real estate is by purchasing residential or commercial mortgage-backed securities. (Study Session 18, LOS 66.b)
+116. An investor long a forward position in a Treasury bill is most likely to be concerned about:
+
+A. default risk.
+B. delivery options the short has.
+C. paying more than expected because the price of the bill rises.
+116. A While Treasury securities are never at risk to default, forward contracts have default risk because the counterparty may default. The short has delivery options with T-bond futures, not a T-bill forward contract. The forward contract locks in a purchase price, which will not change regardless of the bill's performance. (Study Session 17, LOS 61.a)
