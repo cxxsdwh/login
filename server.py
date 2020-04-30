@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app)
 
 tmp=1
-@app.route('/usr')
+@app.route('/usr/')
 def index():
     return render_template('./index.html')
 
