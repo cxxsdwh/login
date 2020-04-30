@@ -10,7 +10,7 @@ args = vars(ap.parse_args())
 key=args['key']
 to=args['to']
 
-pw='Cxx@990104'
+pw='12345'
 port=465
 server_name='smtp.exmail.qq.com'
 me='master@econometrica.cn'
