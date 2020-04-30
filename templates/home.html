@@ -48,8 +48,12 @@ $("#draw_question").click(function () {
         url: "/usr/quest",
         data: createObj({subject:"alternative"},basic),
         success: function (response) {
-            document.getElementById('question').innerHTML = response["question"];
-            document.getElementById('answer').innerHTML = response["answer"];
+            if(response['status']==0){
+                document.getElementById('question').innerHTML = response["question"];
+                document.getElementById('answer').innerHTML = response["answer"];
+            }else{
+                window.location.href='/usr/';
+            }
         },
         error: function (e) {
             console.error("Error:" + e);
