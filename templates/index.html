@@ -2,8 +2,12 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style type="text/css">
+        <!--@import url(https://www.econometrica.cn/style.css);-->
     </style>
-    <title>笔记页</title>
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <title>登陆页</title>
 <script src="../static/vendor/jquery/jquery.min.js"></script>
 <script type="text/javascript">
     try{
@@ -28,12 +32,17 @@
 </script>
 </head>
 <body>
-<div>
+<div class="main-content" style="text-align:center">
+    <h2 id="alert">登陆</h2>
     <form id="myform" name="myform" method="post">
-        帐号 <input type="text" name="usr"/><br/>
-        密码 <input type="password" name="password"/><br/>
-        <input type="button" id="submitBtn" value="登陆">
+        <table style="text-align:left;width:auto;display:inline;margin: 0 auto;">
+
+        <tr><td style:"border-style:none;">帐号</td><td><input type="text" name="usr"/></td></tr>
+        <tr><td style:"border-style:none;">密码</td><td><input type="password" name="password"/></td></tr>
+        <tr><td colspan=2 style="text-align:center;"><input type="button" id="submitBtn" value="登陆"></td></tr>
+        </table>
     </form>
+    <p><a href="/usr/create">创建账户</a></p>
 </div>
 <script type="text/javascript">
     $("#submitBtn").click(function () {
@@ -48,8 +57,9 @@
                     window.location.href='/usr/home';
                     localStorage.setItem("usr",JSON.stringify(document.myform.usr.value));
                     localStorage.setItem("key",JSON.stringify(response['key']));
-                }else if(response['status']==-1){
-                    
+                }else{
+                    document.getElementById('alert').innerHTML=response['key'];
+                    alert(response['key']);
                 }
             },
             error: function (e) {

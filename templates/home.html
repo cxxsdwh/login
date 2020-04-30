@@ -7,7 +7,7 @@
         <!--@import url(https://www.econometrica.cn/style.css);-->
     </style>
     <script src="../static/vendor/jquery/jquery.min.js"></script>
-    <title>笔记页</title>
+    <title>home</title>
 </head>
 <body>
 <script>
@@ -16,14 +16,45 @@ var usr = JSON.parse(localStorage.getItem("usr"));
 </script>
 <div class="main-content">
  <h3>Hello&nbsp;<span id="myhead"></span>, draw your fate wave!</h3>
- <input type="button" id="myexit" value="退出登录">
+ <div>
+ <p id="question"></p>
+ <p id="answer"></p>
+ <input type="button" id="draw_question" value="one draw"/>
+ </div>
+ <input type="button" id="myexit" value="退出登录"/>
 </div>
 <script>
+function createObj(obj1, obj2){
+    var food = {};
+    for (var i in obj1) {
+      food[i] = obj1[i];
+    }
+    for (var j in obj2) {
+      food[j] = obj2[j];
+    }
+    return food;
+};
+basic={usr:usr,key:key};
 document.getElementById('myhead').innerHTML = usr
 $("#myexit").click(function () {
-    localStorage.removeItem('usr')
-    localStorage.removeItem('key')
+    localStorage.removeItem('usr');
+    localStorage.removeItem('key');
     window.location.href='/usr';
+});
+$("#draw_question").click(function () {
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "/usr/quest",
+        data: createObj({subject:"alternative"},basic),
+        success: function (response) {
+            document.getElementById('question').innerHTML = response["question"];
+            document.getElementById('answer').innerHTML = response["answer"];
+        },
+        error: function (e) {
+            console.error("Error:" + e);
+        }
+    })
 });
 </script>
 </body>

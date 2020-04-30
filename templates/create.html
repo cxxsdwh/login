@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style type="text/css">
+        <!--@import url(https://www.econometrica.cn/style.css);-->
+    </style>
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <title>注册页</title>
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="main-content" style="text-align:center">
+    <h2 id="alert">注册账户</h2>
+    <form id="myform" name="myform" method="post">
+        <table style="text-align:left;width:auto;display:inline;margin: 0 auto;">
+
+        <tr><td style:"border-style:none;">帐号</td><td colspan=2><input type="text" name="usr"/></td></tr>
+        <tr><td style:"border-style:none;">密码</td><td colspan=2><input type="password" id="password" name="password"/></td></tr>
+        <tr><td style:"border-style:none;">确认密码</td><td colspan=2><input type="password" id="password_confirm" name="password_confirm"/></td></tr>
+        <tr><td style:"border-style:none;">邮箱</td><td colspan=2><input type="text" id="addr" name="addr"/></td></tr>
+        <tr><td style:"border-style:none;">验证码</td><td><input type="text" name="mail_key"/></td><td><input type="button" id="send_mail" value="发送验证码"></td></tr>
+        <tr><td colspan=3 style="text-align:center;"><input type="button" id="submitBtn" value="提交"></td></tr>
+        </table>
+    </form>
+</div>
+<script type="text/javascript">
+    $("#send_mail").click(function () {
+        $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "/usr/sendMail",
+        data:{"addr":document.getElementById("addr").value},
+        success: function (response) {
+            if(response['status']==0){
+                document.getElementById("send_mail").disabled=true;
+                document.getElementById("send_mail").value="邮件已发送";
+            }else{
+                alert("邮件已被注册");
+            }
+        },
+        error: function (e) {
+            console.error("Error:" + e);
+        }
+        })
+    });
+    $("#submitBtn").click(function () {
+        if(document.getElementById("password").value==document.getElementById("password_confirm").value){
+            var data = $("#myform").serialize();
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "/usr/createUsr",
+                data: data,
+                success: function (response) {
+                    if(response['status']==0){
+                        window.location.href='/usr/home';
+                        localStorage.setItem("usr",JSON.stringify(document.myform.usr.value));
+                        localStorage.setItem("key",JSON.stringify(response['key']));
+                    }else{
+                        document.getElementById('alert').innerHTML=response['key'];
+                        alert(response['key'])
+                    }
+                },
+                error: function (e) {
+                    console.error("Error:" + e);
+                }
+            })
+        }else{
+            alert("密码不一致");
+        }
+    });
+</script>
+</body>
+
+
