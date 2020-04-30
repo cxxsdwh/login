@@ -41,20 +41,13 @@ def myhash(mystr):
     m.update(mystr.encode(encoding='utf-8'))
     return m.hexdigest()
 
-def myhash(mystr):
-    m=hashlib.md5()
-    m.update(mystr.encode(encoding='utf-8'))
-    return m.hexdigest()
-def session_key(usr):
-    tmp=time.time()
-    return myhash(usr+str(tmp)),tmp
 def create_account(name,password,email):
     try:
         mytime=int(time.time())
         ed_user = User(name=name, password=password,email=email,time=mytime)
         session.add(ed_user)
         session.commit()
-        return myhash(str(ed_user.id+mytime))
+        return myhash(str(ed_user.id)+name+mytime)
     except Exception as error:
         print(error)
         session.rollback()
@@ -67,9 +60,9 @@ def renew_key(myusr,dt=1800):
     if time.time() > (myusr.time + dt):
         myusr.time=int(time.time())
         session.commit()
-    return myhash(str(myusr.id+myusr.time))
+    return myhash(str(myusr.id)+myusr.name+str(myusr.time))
 def qualified(myusr,key):
-    real_key=myhash(str(myusr.id+myusr.time))
+    real_key=myhash(str(myusr.id)+myusr.name+str(myusr.time))
     if (time.time()-myusr.time)<3600 and real_key==key:
         return True
     return False
