@@ -26,7 +26,7 @@ class Data(Base):
     def __repr__(self):
         return "<User(id={}, data={}...)>".format(
         self.id, self.data[:50])
-#Base.metadata.create_all(engine, checkfirst=True)
+Base.metadata.create_all(engine, checkfirst=True)
 
 import hashlib
 import time

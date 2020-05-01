@@ -39,7 +39,7 @@
                 document.getElementById("send_mail").disabled=true;
                 document.getElementById("send_mail").value="邮件已发送";
             }else{
-                alert("邮件已被注册");
+                alert(response['key']);
             }
         },
         error: function (e) {

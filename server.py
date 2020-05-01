@@ -6,6 +6,7 @@ from flask import Flask, jsonify, request, render_template,Response
 from flask_cors import CORS
 import imageio
 import numpy as np
+import time
 # Instantiate the Node
 
 app = Flask(__name__)
@@ -22,12 +23,19 @@ def account():
 @app.route('/usr/create')#创建用户页面
 def create():
     return render_template('./create.html')
+last_send=0
 @app.route('/usr/sendMail',methods=['POST'])#创建用户口
 def send():
+    global last_send
     if not email_exist(request.form['addr']):
-        mail_key = push_mail(request.form['addr'])
-        send_mail(key=mail_key,to=request.form['addr'])
-        response = {'status':0}
+        cur_time=time.time()
+        if (cur_time-last_send)>60:
+            last_send=cur_time
+            mail_key = push_mail(request.form['addr'])
+            send_mail(key=mail_key,to=request.form['addr'])
+            response = {'status':0}
+        else:
+            response = {'status':-2,'key':"邮箱冷却中，稍后再试"}
     else:
         response = {'status':-1,'key':"Email have been used"}
     return jsonify(response),200

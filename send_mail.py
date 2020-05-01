@@ -2,18 +2,22 @@ import argparse
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
+import sys
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-k", "--key",required=True)
 ap.add_argument("-t", "--to",required=True)
 args = vars(ap.parse_args())
+
+with open(sys.path[0]+"/no_git.txt",'r') as cg:
+    myls=cg.read().split('\n')
 key=args['key']
 to=args['to']
 
-pw='12345'
-port=465
-server_name='smtp.exmail.qq.com'
-me='master@econometrica.cn'
+pw=myls[3]
+port=int(myls[0])
+server_name=myls[1]
+me=myls[2]
 you = to
 text="验证码:"+str(key)
 msg = MIMEText(text, 'plain')
