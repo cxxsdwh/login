@@ -41,13 +41,13 @@ def myhash(mystr):
     m.update(mystr.encode(encoding='utf-8'))
     return m.hexdigest()
 
-def create_account(name,password,email):
+def create_account(name,password,email,myip):
     try:
         mytime=int(time.time())
         ed_user = User(name=name, password=password,email=email,time=mytime)
         session.add(ed_user)
         session.commit()
-        return myhash(str(ed_user.id)+name+mytime)
+        return myhash(str(ed_user.id)+name+mytime+myip)
     except Exception as error:
         print(error)
         session.rollback()
@@ -56,13 +56,13 @@ def query_user(usr):
     return session.query(User).filter_by(name=usr).first()
 def email_exist(addr):
     return session.query(exists().where(User.email==addr)).scalar()
-def renew_key(myusr,dt=1800):
+def renew_key(myusr,myip,dt=1800):
     if time.time() > (myusr.time + dt):
         myusr.time=int(time.time())
         session.commit()
-    return myhash(str(myusr.id)+myusr.name+str(myusr.time))
-def qualified(myusr,key):
-    real_key=myhash(str(myusr.id)+myusr.name+str(myusr.time))
+    return myhash(str(myusr.id)+myusr.name+str(myusr.time)+myip)
+def qualified(myusr,myip,key):
+    real_key=myhash(str(myusr.id)+myusr.name+str(myusr.time)+myip)
     if (time.time()-myusr.time)<3600 and real_key==key:
         return True
     return False

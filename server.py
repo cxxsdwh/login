@@ -44,7 +44,7 @@ def create_usr():
     #print(request.form.keys())
     if check_mail(request.form['addr'],request.form['mail_key']):
         tmp = create_account(name=request.form['usr'],password=request.form['password'],
-                      email=request.form['addr'])
+                      email=request.form['addr'],myip=request.remote_addr)
         if tmp:
             response = {'status':0,'key':tmp}
         else:
@@ -58,7 +58,7 @@ def my_login():
     myusr=query_user(request.form['usr'])
     if myusr:
         if 'key' in request.form.keys():
-            if qualified(myusr,request.form['key']):
+            if qualified(myusr,request.remote_addr,request.form['key']):
                 print('in date')
                 new_key=renew_key(myusr)
                 response = {'status':0,'key':new_key}
@@ -68,7 +68,7 @@ def my_login():
         elif 'password' in request.form.keys():
             if myusr.password==request.form['password']:
                 print('real passwd')
-                new_key=renew_key(myusr)
+                new_key=renew_key(myusr,request.remote_addr)
                 response = {'status':0,'key':new_key}
             else:
                 print('wrong passwd')
@@ -84,7 +84,7 @@ def my_home():
 @app.route('/usr/quest', methods=['POST'])#问题请求口
 def quest():
     myusr=query_user(request.form['usr'])
-    if qualified(myusr,request.form['key']):
+    if qualified(myusr,request.remote_addr,request.form['key']):
         tmp=query_quest().filter_by(subject=request.form['subject'])
         res=tmp[np.random.randint(0,tmp.count())].__dict__
         res.pop('_sa_instance_state', None)
