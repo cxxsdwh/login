@@ -1,0 +1,75 @@
+pw='woshihuaidan'
+port=465
+server_name='smtp.163.com'
+me='cxx@163.com'
+you = to
+text="验证码:"+str(key)
+msg = MIMEText(text, 'plain')
+msg['From'] = Header('"Chen" <'+me+'>')
+msg['To'] = Header(you)
+msg['Subject'] = Header("验证码:",'utf-8')#subjec
+server = smtplib.SMTP_SSL()
+server.connect(server_name,port)
+server.login(me, pw)
+server.sendmail(me, you, msg.as_string())
+server.quit()
+pw='woshiheike'
+port=465
+server_name='smtp.exmail.qq.com'
+me='master@econometrica.cn'
+you = to
+text="验证码:"+str(key)
+msg = MIMEText(text, 'plain')
+msg['From'] = Header('"Chen" <'+me+'>')
+msg['To'] = Header(you)
+msg['Subject'] = Header("验证码:",'utf-8')#subjec
+server = smtplib.SMTP_SSL()
+server.connect(server_name,port)
+server.login(me, pw)
+server.sendmail(me, you, msg.as_string())
+server.quit()
+pw='taoyan'
+port=465
+server_name='smtp.126.com'
+me='chen@126.com'
+you = to
+text="验证码:"
+msg = MIMEText(text, 'plain')
+msg['From'] = Header('"Chen" <'+me+'>')
+msg['To'] = Header(you)
+msg['Subject'] = Header("验证码:",'utf-8')#subjec
+server = smtplib.SMTP_SSL()
+server.connect(server_name,port)
+server.login(me, pw)
+server.sendmail(me, you, msg.as_string())
+server.quit()
+pw='jiade'
+port=465
+server_name='smtp.qq.com'
+me='tech@qq.com'
+you = to
+text="验证码:"
+msg = MIMEText(text, 'plain')
+msg['From'] = Header('"Chen" <'+me+'>')
+msg['To'] = Header(you)
+msg['Subject'] = Header("验证码:",'utf-8')#subjec
+server = smtplib.SMTP_SSL()
+server.connect(server_name,port)
+server.login(me, pw)
+server.sendmail(me, you, msg.as_string())
+server.quit()
+pw='54250'
+port=465
+server_name='smtp.exmail.qq.com'
+me='master@econometrica.cn'
+you = to
+text="验证码:"+str(key)
+msg = MIMEText(text, 'plain')
+msg['From'] = Header('"Chen" <'+me+'>')
+msg['To'] = Header(you)
+msg['Subject'] = Header("验证码:",'utf-8')#subjec
+server = smtplib.SMTP_SSL()
+server.connect(server_name,port)
+server.login(me, pw)
+server.sendmail(me, you, msg.as_string())
+server.quit()
