@@ -47,7 +47,7 @@ def create_account(name,password,email,myip):
         ed_user = User(name=name, password=password,email=email,time=mytime)
         session.add(ed_user)
         session.commit()
-        return myhash(str(ed_user.id)+name+mytime+myip)
+        return myhash(str(ed_user.id)+name+str(mytime)+myip)
     except Exception as error:
         print(error)
         session.rollback()

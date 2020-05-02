@@ -72,10 +72,10 @@ def my_login():
                 response = {'status':0,'key':new_key}
             else:
                 print('wrong passwd')
-                response = {'status':-2,'key':'Wrong Password'}
+                response = {'status':-2,'key':'账户或密码错误'}
     else:
         print('not exist')
-        response = {'status':-2,'key':'Account Not Exist'}
+        response = {'status':-2,'key':'账户或密码错误'}
     return jsonify(response), 200
 @app.route('/usr/home', methods=['GET'])#登陆后主页
 def my_home():
