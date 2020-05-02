@@ -60,7 +60,7 @@ def my_login():
         if 'key' in request.form.keys():
             if qualified(myusr,request.remote_addr,request.form['key']):
                 print('in date')
-                new_key=renew_key(myusr)
+                new_key=renew_key(myusr,request.remote_addr)
                 response = {'status':0,'key':new_key}
             else:
                 print('out of date ')

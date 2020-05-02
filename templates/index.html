@@ -18,8 +18,8 @@
         data: {usr:JSON.parse(localStorage.getItem("usr")),key:JSON.parse(localStorage.getItem("key"))},
         success: function (response) {
             if(response['status']==0){
-                window.location.href='/usr/home';
                 localStorage.setItem("key",JSON.stringify(response['key']));
+                window.location.href='/usr/home';
             }
         },
         error: function (e) {
