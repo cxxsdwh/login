@@ -2,7 +2,7 @@ from usr_utils import *
 from mail_utils import *
 from quest_utils import *
 
-from flask import Flask, jsonify, request, render_template,Response
+from flask import Flask, jsonify, request, render_template,Response,redirect,abort
 from flask_cors import CORS
 import imageio
 import numpy as np
@@ -12,14 +12,14 @@ import time
 app = Flask(__name__)
 CORS(app)
 
-tmp=1
 @app.route('/usr/')
 def index():
     return render_template('./index.html')
+@app.route('/usr/test')
+#def test():
+    #abort(404)
+#    return render_template('./test.html')
 
-@app.route('/usr/account')#登陆页面
-def account():
-    return render_template('./index.html')
 @app.route('/usr/create')#创建用户页面
 def create():
     return render_template('./create.html')
@@ -84,16 +84,32 @@ def my_home():
 @app.route('/usr/quest', methods=['POST'])#问题请求口
 def quest():
     myusr=query_user(request.form['usr'])
-    if qualified(myusr,request.remote_addr,request.form['key']):
-        tmp=query_quest().filter_by(subject=request.form['subject'])
-        res=tmp[np.random.randint(0,tmp.count())].__dict__
-        res.pop('_sa_instance_state', None)
-        res.update({"status":0})
+    if myusr:
+        if qualified(myusr,request.remote_addr,request.form['key']):
+            tmp=query_quest().filter_by(subject=request.form['subject'])
+            res=tmp[np.random.randint(0,tmp.count())].__dict__
+            res.pop('_sa_instance_state', None)
+            res.update({"status":0})
+        else:
+            res={{"status":-1}}
     else:
-        res={{"status":-1}}
+        res = {'status':-2,'key':'账户或密码错误'}
     return  jsonify(res),200
+@app.route('/usr/protected/<fname>',methods=['GET'])
+def get_protected(fname):
+    if ("key" in request.args.keys()) and ("usr" in request.args.keys()):
+        print(request.args['usr'],request.args['key'])
+        myusr=query_user(request.args['usr'])
+        if myusr:
+            if qualified(myusr,request.remote_addr,request.args['key']):
+                print("ok")
+                return render_template('./protected/'+fname)
+            else:
+                return redirect('/usr')
+        else:
+            abort(404)
+    else:
+        abort(404)
 if __name__ == '__main__':
     port=80
     app.run(host='0.0.0.0', port=port)
-
-
