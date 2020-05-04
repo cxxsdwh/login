@@ -10,6 +10,9 @@ import time
 # Instantiate the Node
 
 app = Flask(__name__)
+
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 CORS(app)
 
 @app.route('/usr/')
